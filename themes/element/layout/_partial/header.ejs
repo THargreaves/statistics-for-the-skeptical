@@ -1,0 +1,25 @@
+<%- partial('_partial/loading') %>
+
+<header id="header" class="site-header clearfix">
+
+  <a class="logo square clearfix" href="<%- url_for() %>">
+    <% var letters = config.title.replace(/ /g, '').split(''); letters.forEach(function(v, i) { %>
+      <span class="<%- i<10 || i>15 ? 'b' : 'w' %>">
+        <%- v %>
+      </span>
+      <%if (i==12) { %>
+        <br>
+      <% } %>
+    <% }); %>
+    <style>
+      <%- fa_css() %>
+    </style>
+    <span class="b"><%- fa_inline('lightbulb', {prefix: 'far'}) %></span>
+  </a>
+  <a class="me square site-nav-switch clearfix noprint">
+    <span class="b">
+    	<span class="icon icon-menu"></span>
+    </span>
+  </a>
+
+</header>
