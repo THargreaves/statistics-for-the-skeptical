@@ -1,5 +1,7 @@
 <head>
   <meta charset="utf-8">
+  <meta property="og:image" content="https://www.statisticsfortheskeptical.com/resources/open_graph.jpg">
+  <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
   <%
   var title = page.title;
   if (is_archive()) {
